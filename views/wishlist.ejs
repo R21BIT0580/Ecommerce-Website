@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shopping Cart</h1>
+    <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Product</th>
+                    <th>quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach(function(items) { %>
+                    <tr>
+                        <td><%= items.user %></td>
+                        <td><%= items.product %></td>
+                        <td><%= items.quantity %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+</body>
+
+</html>
